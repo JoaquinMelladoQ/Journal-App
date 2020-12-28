@@ -13,11 +13,24 @@ export const RegisterScreen = () => {
                 className="auth__input" 
                 autoComplete="off"
             />
+            <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                className="auth__input" 
+                autoComplete="off"
+            />
 
             <input
                 type="password"
                 placeholder="Password"
                 name="password"
+                className="auth__input" 
+            />
+            <input
+                type="password"
+                placeholder="Confirm password"
+                name="password2"
                 className="auth__input" 
             />
 
@@ -30,7 +43,7 @@ export const RegisterScreen = () => {
 
             <Link
                 className="link" 
-                to="/auth/register"
+                to="/auth/login"
             >
                 Already registered?
             </Link>
