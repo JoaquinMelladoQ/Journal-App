@@ -1,5 +1,4 @@
 import React from 'react'
-import './Styles/Styles.scss'
 
 export const JournalApp = () => {
     return (
