@@ -28,7 +28,7 @@ export const LoginScreen = () => {
                 </button>
                 <hr />
 
-                <div>
+                <div className="auth__social-networks">
                     <p>Login with social networks</p>
                     <div 
                         className="google-btn"
