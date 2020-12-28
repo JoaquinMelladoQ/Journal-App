@@ -5,7 +5,7 @@ import { RegisterScreen } from '../Components/Auth/RegisterScreen'
 
 export const AuthRouter = () => {
     return (
-        <div>
+        <div className="auth__main">
             <Switch>
                 <Route 
                     exact
