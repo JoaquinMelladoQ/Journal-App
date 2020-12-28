@@ -4,18 +4,21 @@ import { Link } from 'react-router-dom'
 export const LoginScreen = () => {
     return (
         <>
-            <h3>Login</h3>
+            <h3 className="auth__title">Login</h3>
             <form>
                 <input
                     type="text"
                     placeholder="email"
-                    name="email" 
+                    name="email"
+                    className="auth__input" 
+                    autoComplete="off"
                 />
 
                 <input
                     type="password"
                     placeholder="password"
-                    name="password" 
+                    name="password"
+                    className="auth__input" 
                 />
 
                 <button

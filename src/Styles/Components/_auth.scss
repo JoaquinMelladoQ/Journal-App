@@ -14,3 +14,17 @@
     padding: 20px;
     width: 250px;
 }
+.auth__title {
+    color: darken($color: $primary, $amount: 20);
+    margin-bottom: 20px;
+}
+
+.auth__input {
+    color: $dark-gray;
+    border: 0px;
+    border-bottom: 1px solid $light-grey;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 20px;
+    width: 100%;
+}
