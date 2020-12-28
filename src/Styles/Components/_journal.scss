@@ -42,3 +42,17 @@
     margin-top: 30px;
     overflow-y: scroll;
 }
+
+.journal__entry {
+    background-color: white;
+    border-radius: 4px;
+    color: $dark-gray;
+    display: flex;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.journal__entry-picture {
+    height: 75px;
+    width: 75px;
+}

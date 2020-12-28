@@ -2,8 +2,10 @@
  
  export const JournalEntry = () => {
      return (
-         <div>
-             
+         <div className="journal__entry">
+             <div className="journal__entry-picture">
+
+             </div>
          </div>
      )
  }
