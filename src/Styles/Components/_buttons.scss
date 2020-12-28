@@ -21,9 +21,10 @@
         background-color: darken($color: $primary, $amount: 15);
     }
 }
-$white: #fff;
-$google-blue: #4285f4;
-$button-active-blue: #1669f2;
+
+.btn-block {
+    width: 100%;
+}
 
 .google-btn {
     cursor: pointer;
