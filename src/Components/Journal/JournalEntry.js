@@ -17,8 +17,13 @@
                     A new day
                 </p>
                 <p className="journal__entry-title">
-                    aoedutnao
+                Lorem Ipsum is simply dummy text of the printing and typesetting
                 </p>
+             </div>
+
+             <div className="journal__entry-date-box">
+                <span>Monday</span>
+                <h4>28</h4>
              </div>
          </div>
      )
