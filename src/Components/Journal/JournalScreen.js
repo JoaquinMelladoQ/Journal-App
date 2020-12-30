@@ -1,5 +1,6 @@
 import React from 'react'
 import { Sidebar } from './Sidebar'
+import { NothingSelected } from './NothingSelected'
 
 export const JournalScreen = () => {
     return (
