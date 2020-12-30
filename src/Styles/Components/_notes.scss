@@ -29,3 +29,16 @@
     font-weight: 700;
     margin-bottom: 10px;
 }
+
+.notes__textarea {
+    border: none;
+    color: $dark-gray;
+    font-size: 20px;
+    flex: 1 1 auto;
+    resize: none;
+}
+
+.notes__image img {
+    box-shadow: 5px 5px $dark-gray;
+    height: 150px;
+}
