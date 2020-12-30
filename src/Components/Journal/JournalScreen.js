@@ -6,7 +6,7 @@ export const JournalScreen = () => {
         <div className="journal___main-content">
             <Sidebar />
             <main>
-                <h1>Main content</h1>
+                <NothingSelected />
             </main>
         </div>
     )
