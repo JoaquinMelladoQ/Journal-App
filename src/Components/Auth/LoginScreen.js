@@ -11,11 +11,18 @@ export const LoginScreen = () => {
 
     const { email, password } = formValues
 
+    const handleLogin = (e) => {
+        e.preventDefault()
+        console.log(email, password)
+    }
+
 
     return (
         <>
             <h3 className="auth__title">Login</h3>
-            <form>
+            <form 
+              onSubmit={ handleLogin }
+            >
                 <input
                     type="text"
                     placeholder="Email"
