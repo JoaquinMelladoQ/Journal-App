@@ -28,6 +28,9 @@ export const RegisterScreen = () => {
         } else if ( !validator.isEmail( email ) ) {
             console.log('email is not valid')
             return false 
+        } else if ( password !== password2 || password.length < 5 ) {
+            console.log('password should be at least 6 characters and match each other')
+            return false
         }
         return true
     }
