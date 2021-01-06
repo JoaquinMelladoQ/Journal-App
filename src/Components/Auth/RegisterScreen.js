@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { useForm } from '../../Hooks/useForm'
 import { setError, removeError } from '../../Actions/Ui'
@@ -8,6 +8,8 @@ import validator from 'validator'
 export const RegisterScreen = () => {
 
     const dispatch = useDispatch()
+    const state = useSelector( state => state )
+    console.log(state)
 
     const [ formValues, handleInputChange ] = useForm({
         name: 'Lele',
