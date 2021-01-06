@@ -13,14 +13,28 @@ export const RegisterScreen = () => {
 
     const { name, email, password, password2 } = formValues
 
-    const handleRegister = (e) => 
+    const handleRegister = (e) => {
         e.preventDefault()
-        console.log( name, email, password, password2 )
+        if ( isFormValid() ) {
+            console.log('Form is correct')
+        }
+    }
 
+    const isFormValid = () => {
+        if ( name.trim().length === 0 ) {
+            console.log('name is required')
+            return false
+        }
+        return true
+    }
     return (
         <>
             <h3 className="auth__title">Register</h3>
             <form onSubmit={ handleRegister } >
+                <div className="auth__alert-error">
+                    Alert error
+                </div>
+
                 <input
                     type="text"
                     placeholder="Name"
