@@ -8,8 +8,8 @@ import validator from 'validator'
 export const RegisterScreen = () => {
 
     const dispatch = useDispatch()
-    const state = useSelector( state => state )
-    console.log(state)
+    const { msgError } = useSelector( state => state.ui )
+    console.log(msgError)
 
     const [ formValues, handleInputChange ] = useForm({
         name: 'Lele',
@@ -29,13 +29,13 @@ export const RegisterScreen = () => {
 
     const isFormValid = () => {
         if ( name.trim().length === 0 ) {
-            dispatch( setError('name is required') )
+            dispatch( setError('Name is required') )
             return false
         } else if ( !validator.isEmail( email ) ) {
-            dispatch( setError('email is not valid') )
+            dispatch( setError('Email is not valid') )
             return false 
         } else if ( password !== password2 || password.length < 5 ) {
-            dispatch( setError('password should be at least 6 characters and match each other') )
+            dispatch( setError('Password should be at least 6 characters and match each other') )
             return false
         }
         dispatch( removeError() )
@@ -45,10 +45,15 @@ export const RegisterScreen = () => {
         <>
             <h3 className="auth__title">Register</h3>
             <form onSubmit={ handleRegister } >
-                <div className="auth__alert-error">
-                    Alert error
-                </div>
 
+                {
+                    msgError && 
+                    (
+                        <div className="auth__alert-error">
+                            { msgError }
+                        </div>
+                    )
+                }
                 <input
                     type="text"
                     placeholder="Name"
