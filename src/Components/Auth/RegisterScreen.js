@@ -25,6 +25,9 @@ export const RegisterScreen = () => {
         if ( name.trim().length === 0 ) {
             console.log('name is required')
             return false
+        } else if ( !validator.isEmail( email ) ) {
+            console.log('email is not valid')
+            return false 
         }
         return true
     }
