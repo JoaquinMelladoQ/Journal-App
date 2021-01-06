@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useForm } from '../../Hooks/useForm'
+import validator from 'validator'
 
 export const RegisterScreen = () => {
 
