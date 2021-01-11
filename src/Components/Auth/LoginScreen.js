@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 export const LoginScreen = () => {
 
     const dispatch = useDispatch()
-    const { loading } = useSelector(state => state.ui)
+    const { loading } = useSelector( state => state.ui )
 
     const [ formValues, handleInputChange ] = useForm({
         email: 'lala@gmail.com',
