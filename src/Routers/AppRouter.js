@@ -8,14 +8,20 @@ import {
 import { firebase } from '../Firebase/firebaseConfig'
 import { AuthRouter } from './AuthRouter'
 import { JournalScreen } from '../Components/Journal/JournalScreen'
+import { useDispatch } from 'react-redux'
+import { login } from '../Actions/Auth'
 
 export const AppRouter = () => { 
 
+    const dispatch = useDispatch()
+
     useEffect(() => {
       firebase.auth().onAuthStateChanged((user) =>{
-          console.log(user)
+          if ( user?.uid ) {
+              dispatch( login(user.uid, user.displayName) )
+          }
       }) 
-    }, [])
+    }, [ dispatch ])
 
 
     return (
