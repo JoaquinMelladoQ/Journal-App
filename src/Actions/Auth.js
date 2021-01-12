@@ -37,6 +37,7 @@ export const startRegisterWithEmailPasswordName = ( email, password, name ) => {
                 )
             }).catch( e => {
                 console.log(e)
+                Swal.fire('Error', e.message, 'error');
             } )
     }
 }
