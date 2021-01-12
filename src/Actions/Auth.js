@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2'
 import { firebase, googleAuthProvider } from '../Firebase/firebaseConfig'
 import { types } from '../Types/Types'
 import { finishLoading, startLoading } from './Ui'
