@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
+import { startLogout } from '../../Actions/Auth'
 import { JournalEntries } from './JournalEntries'
 
 export const Sidebar = () => {
@@ -7,7 +8,7 @@ export const Sidebar = () => {
     const dispatch = useDispatch()
 
     const handleLogout = () => {
-        console.log('click')
+        dispatch( startLogout()  )
     }
 
     return (
